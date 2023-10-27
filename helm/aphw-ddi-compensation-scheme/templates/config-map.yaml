@@ -14,4 +14,5 @@ data:
   {{- end }}
   REDIS_PORT: {{ quote .Values.container.redisPort }}
   AZURE_STORAGE_USE_CONNECTION_STRING: {{ quote .Values.container.azureStorageUseConnectionString }}
+  AZURE_STORAGE_CREATE_CONTAINERS: {{ quote .Values.container.azureStorageCreateContainers }}
 {{- end -}}
