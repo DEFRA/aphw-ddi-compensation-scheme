@@ -72,6 +72,9 @@
       "jest",
       "beforeAll",
       "afterAll"
+    ],
+    "ignore": [
+      "app/dist/**/*.js"
     ]
   },
   "nodemonConfig": {
