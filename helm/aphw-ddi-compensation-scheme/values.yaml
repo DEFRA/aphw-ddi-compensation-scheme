@@ -26,6 +26,14 @@ container:
   limitMemory: 100Mi
   limitCpu: 100m
   port: 3000
+  cookiePassword: cookiecookiecookiecookiecookiecookie
+  redisHostname: redis-hostname.default
+  redisPartition: aphw-ddi-compensation-scheme
+  redisPassword: redis
+  redisPort: 6379
+  azureStorageConnectionString: dummy
+  azureStorageUseConnectionString: false
+  azureStorageAccountName: dummy
 
 livenessProbe:
   path: /healthz
