@@ -1,6 +1,6 @@
 {
   "name": "aphw-ddi-compensation-scheme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Web frontend",
   "homepage": "https://github.com/DEFRA/aphw-ddi-compensation-scheme",
   "main": "app/index.js",
@@ -72,6 +72,9 @@
       "jest",
       "beforeAll",
       "afterAll"
+    ],
+    "ignore": [
+      "app/dist/**/*.js"
     ]
   },
   "nodemonConfig": {
