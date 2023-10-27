@@ -35,6 +35,11 @@ container:
   azureStorageUseConnectionString: false
   azureStorageAccountName: dummy
 
+ingress:
+  class: nginx
+  endpoint: aphw-ddi-compensation-scheme
+  server: value.replaced.from.app.config
+
 livenessProbe:
   path: /healthz
   port: 3000
