@@ -4,3 +4,7 @@ helm/**/*.lock
 *.tgz
 .vscode
 .env
+
+# Generated views
+_layout.njk
+_cookie-banner.njk

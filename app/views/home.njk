@@ -1,0 +1,29 @@
+{% extends '_layout.njk' %}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+
+      <p>Use this service if you want to claim compensation.</p>
+    
+      <h2 class="govuk-heading-m">Who can claim compensation</h2>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae orci rhoncus, molestie sapien sit amet, elementum est. Pellentesque ac leo eu sapien dictum pellentesque eu at orci. Etiam dui sem, porta nec porttitor eget, faucibus id lorem. Fusce et lorem nisl. Nullam fringilla non magna a rhoncus. Vivamus aliquam quis est eget pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean at ultricies eros. Ut et lacus sed enim placerat molestie non ac magna. Vestibulum vel mi sem. Quisque faucibus tincidunt blandit. Suspendisse purus nisi, rhoncus a gravida ut, bibendum non tortor.</p>
+    
+      <h2 class="govuk-heading-m">What you'll need</h2>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae orci rhoncus, molestie sapien sit amet, elementum est. Pellentesque ac leo eu sapien dictum pellentesque eu at orci. Etiam dui sem, porta nec porttitor eget, faucibus id lorem. Fusce et lorem nisl. Nullam fringilla non magna a rhoncus. Vivamus aliquam quis est eget pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean at ultricies eros. Ut et lacus sed enim placerat molestie non ac magna. Vestibulum vel mi sem. Quisque faucibus tincidunt blandit. Suspendisse purus nisi, rhoncus a gravida ut, bibendum non tortor.:</p>
+     
+      {{ govukButton({
+        text: "Start now",
+        href: "/name",
+        classes: "govuk-!-margin-top-2",
+        isStartButton: true
+      }) }}
+
+  </div>
+{% endblock %}
