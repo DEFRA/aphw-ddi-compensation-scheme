@@ -32,7 +32,7 @@
     "@hapi/yar": "^11.0.3",
     "@joi/date": "^2.1.0",
     "applicationinsights": "^3.16.0",
-    "govuk-frontend": "^5.5.0",
+    "govuk-frontend": "^4.4.0",
     "hapi-pino": "^12.1.0",
     "into-stream": "^8.0.0",
     "joi": "^17.13.8",
