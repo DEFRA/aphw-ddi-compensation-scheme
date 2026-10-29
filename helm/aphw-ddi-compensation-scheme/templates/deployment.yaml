@@ -1,8 +1,3 @@
 {{- include "ffc-helm-library.deployment" (list . "aphw-ddi-compensation-scheme.deployment") -}}
 {{- define "aphw-ddi-compensation-scheme.deployment" -}}
-spec:
-  template:
-    spec:
-      containers:
-      - {{ include "ffc-helm-library.container" (list . "aphw-ddi-compensation-scheme.container") }}
 {{- end -}}
