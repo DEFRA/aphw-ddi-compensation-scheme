@@ -77,7 +77,6 @@
   },
   "overrides": {
     "uuid": "$uuid",
-    "sprintf-js": "^1.1.3",
     "glob@^10": "^14.0.3",
     "glob@^13": "^14.0.3",
     "minimatch@^10": "^11.0.4"
