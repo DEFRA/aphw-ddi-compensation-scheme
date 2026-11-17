@@ -1,0 +1,6 @@
+---
+environment: production
+environmentCode: snd
+container:
+  redisHostname: SNDFFCINFRD2001.redis.cache.windows.net
+  redisPort: 6380

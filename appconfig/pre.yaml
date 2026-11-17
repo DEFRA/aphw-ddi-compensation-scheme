@@ -1,0 +1,22 @@
+---
+environment: production
+environmentCode: pre
+container:
+  redisHostname: PREFFCINFRD1001.redis.cache.windows.net
+  redisPort: 6380
+secretProviderClass:
+  azure:
+    keyvaultName: PREFFCINFKV1001
+    objects:
+      - objectName: pre-ffcahwr-appinsights-connectionString
+        objectType: secret
+      - objectName: pre-redisPassword
+        objectType: secret
+  secretObjects:
+    - secretName: aphw-ddi-compensation-scheme
+      type: Opaque
+      data:
+        - objectName: pre-ffcahwr-appinsights-connectionString
+          key: APPINSIGHTS_CONNECTIONSTRING
+        - objectName: pre-redisPassword
+          key: REDIS_PASSWORD

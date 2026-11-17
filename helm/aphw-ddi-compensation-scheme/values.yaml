@@ -12,11 +12,10 @@ appInsights:
   connectionString:
 
 containerConfigMap:
-  name: aphw-ddi-compensation-scheme-config-map
+  name: aphw-ddi-compensation-scheme
 
 containerSecret:
-  name: aphw-ddi-compensation-scheme-container-secret
-  type: Opaque
+  name: aphw-ddi-compensation-scheme
 
 deployment: {}
 
@@ -29,9 +28,7 @@ container:
   cookiePassword: cookiecookiecookiecookiecookiecookie
   redisHostname: redis-hostname.default
   redisPartition: aphw-ddi-compensation-scheme
-  redisPassword: redis
   redisPort: 6379
-  azureStorageConnectionString: dummy
   azureStorageUseConnectionString: false
   azureStorageAccountName: dummy
 
@@ -50,3 +47,26 @@ readinessProbe:
   periodSeconds: 10
   failureThreshold: 3
   timeoutSeconds: 5
+
+workloadIdentity: true
+
+azureIdentity:
+  clientID: not-a-real-clientID
+  resourceID: not-a-real-resourceID
+
+secretProviderClass:
+  azure:
+    keyvaultName: SNDFFCINFKV2001
+    objects:
+      - objectName: snd2-aphw-appinsights-connectionString
+        objectType: secret
+      - objectName: snd2-redisPassword
+        objectType: secret
+  secretObjects:
+    - secretName: aphw-ddi-compensation-scheme
+      type: Opaque
+      data:
+        - objectName: snd2-aphw-appinsights-connectionString
+          key: APPINSIGHTS_CONNECTIONSTRING
+        - objectName: snd2-redisPassword
+          key: REDIS_PASSWORD

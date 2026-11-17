@@ -8,6 +8,9 @@ services:
     image: aphw-ddi-compensation-scheme-development
     container_name: aphw-ddi-compensation-scheme-test
     command: npm run test
+    environment:
+      AZURE_STORAGE_USE_CONNECTION_STRING: "false"
+      NODE_ENV: test
     volumes:
       - ./app:/home/node/app
       - ./test:/home/node/test
